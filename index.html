@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nityacon | Custom Wire Harness &amp; Cable Assembly Manufacturer in India (Zero MOQ)</title>
+<meta name="description" content="Nityacon is an India-based custom wire harness and cable assembly manufacturer specializing in low-volume prototypes, drone UAV wiring looms, AI data center LSZH harnesses, robotics, and student R&amp;D builds with Zero MOQ and 100% continuity testing.">
+<meta name="keywords" content="custom wire harness manufacturer India, cable assembly manufacturer, prototype wire harness, drone wiring harness, UAV cable assembly, data center PDU cables, LSZH wire harness, JST Molex crimping service, low volume wire harness, wiring loom manufacturer Pune India">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a1020">
+<!-- BEFORE DEPLOY: set your real public URL below (e.g. https://yourname.github.io/repo/ or your own domain) -->
+<!-- <link rel="canonical" href="https://YOUR_DOMAIN/"> -->
+<!-- Open Graph: link preview cards on WhatsApp / LinkedIn / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nityacon">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="Nityacon | Custom Wire Harness &amp; Cable Assembly Manufacturer in India (Zero MOQ)">
+<meta property="og:description" content="Custom wire harnesses and cable assemblies for drones, AI data centers, robotics and student R&amp;D. Zero MOQ, 100% continuity tested.">
+<!-- Preview image + URL need ABSOLUTE links. Add a 1200x630 image (e.g. images/og-preview.jpg), then uncomment and fix:
+<meta property="og:url" content="https://YOUR_DOMAIN/">
+<meta property="og:image" content="https://YOUR_DOMAIN/images/og-preview.jpg">
+<meta name="twitter:card" content="summary_large_image"> -->
+<!-- Structured data (Organization + FAQ) for Google -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "Nityacon", "foundingDate": "2026", "email": "sales@nityacon.in", "areaServed": "IN", "description": "Custom wire harness and cable assembly manufacturer in India."}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you really accept single-unit (1 piece) prototype orders?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Nityacon has zero minimum order quantity (MOQ). We build single-piece prototypes and small batches for startups, MSMEs, R&D labs and college teams, and a rough hand-drawn pinout sketch is enough to get a quote."}}, {"@type": "Question", "name": "Can you source the wires and original JST/Molex connectors from our BOM?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer turnkey BOM and component sourcing: wire, terminals and original JST and Molex connectors as listed in your BOM. You can also supply your own parts. Lead times for sourced parts are confirmed in your quote."}}, {"@type": "Question", "name": "Do you ship custom wire harnesses across India?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer on-time pan-India delivery. Every harness is continuity tested and dispatched ready to plug in, with the delivery timeline confirmed in your quote."}}]}]}</script>
+<!--
+=====================================================================
+ SETUP NOTES (read once)
+ 1. EMAIL: Search this file for YOUR_EMAIL_HERE (form action + the
+    optional AJAX block) and replace with your real Gmail/business email.
+ 2. ACTIVATION: Submit the form once after deploying. Formsubmit sends
+    a one-time activation email to that address. Click the link. After
+    that, every RFQ (with attachments) lands in your inbox.
+ 3. NOTE: Formsubmit needs your email in the action URL
+    (https://formsubmit.co/YOUR_EMAIL_HERE); the bare
+    https://formsubmit.co will not route anywhere.
+ 4. FILE UPLOADS: Standard submission (default) supports attachments.
+    Formsubmit's free plan limits attachment size (about 5 MB).
+ 5. WHATSAPP: Replace 919999999999 with your number (country code, no +).
+ 6. Deploy: commit this file as index.html to your repo, then
+    Settings > Pages > Deploy from branch.
+=====================================================================
+-->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+<!-- OPTIONAL: Google <model-viewer> for external .glb/.gltf CAD models (see HERO 3D comment below)
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script> -->
+<style>
+ html{scroll-behavior:smooth}
+ details summary{list-style:none;cursor:pointer}
+ details summary::-webkit-details-marker{display:none}
+ details summary::after{content:"+";float:right;color:#fbbf24;font-weight:700}
+ details[open] summary::after{content:"\2212"}
+ .dot{box-shadow:0 0 10px #22c55e;animation:blink 1.2s ease-in-out infinite}
+ @keyframes blink{0%,100%{opacity:1;box-shadow:0 0 12px #22c55e}50%{opacity:.2;box-shadow:0 0 2px #22c55e}}
+ @media (prefers-reduced-motion:reduce){.dot{animation:none}}
+ body{background:radial-gradient(1200px 600px at 80% -10%,#10305a55,transparent),#0a1020;color:#fff;font-family:Inter,system-ui,sans-serif}
+ .glass{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(14px);border-radius:1rem}
+ .tilt{transition:transform .15s ease-out;transform-style:preserve-3d}
+ .blue{color:#38bdf8}.amber{color:#fbbf24}
+ input,select,textarea{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:.6rem;padding:.65rem .8rem;width:100%;color:#fff}
+ select option{color:#111}
+ input:focus,select:focus,textarea:focus{outline:2px solid #38bdf8}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 glass !rounded-none">
+ <nav class="max-w-7xl mx-auto flex items-center justify-between px-5 py-3">
+  <a href="#top" class="flex items-center gap-2 font-bold text-xl tracking-wide">
+   <span class="dot w-3 h-3 rounded-full bg-green-500"></span>Nityacon
+   <span class="text-[10px] px-2 py-0.5 rounded-full border border-amber-400 amber">EST. 2026</span>
+  </a>
+  <div class="hidden lg:flex gap-6 text-sm text-slate-300">
+   <a href="#capabilities" class="hover:text-white">Capabilities</a>
+   <a href="#serve" class="hover:text-white">Who We Serve</a>
+   <a href="#process" class="hover:text-white">How It Works</a>
+   <a href="#about" class="hover:text-white">About Nityacon</a>
+   <a href="#contact" class="hover:text-white">Contact / RFQ</a>
+  </div>
+  <a href="#contact" class="px-4 py-2 rounded-lg bg-amber-400 text-slate-900 font-semibold text-sm hover:bg-amber-300">Get a Quote</a>
+ </nav>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="max-w-7xl mx-auto px-5 pt-32 pb-20 grid lg:grid-cols-2 gap-10 items-center">
+ <div>
+  <p class="mb-3 inline-block text-xs sm:text-sm font-semibold tracking-wide uppercase px-3 py-1 rounded-full border border-amber-400/60 amber">Custom Wire Harness &amp; Cable Assembly Manufacturer in India</p>
+  <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Precision Custom <span class="blue">Wire Harnesses.</span> From Single Prototypes to Scalable Production.</h1>
+  <p class="mt-5 text-slate-300 text-lg">High-reliability wiring assemblies built for UAVs, AI Data Centers, Robotics, MSMEs, and College Innovation Teams. <b class="amber">Zero Minimum Order Quantity (MOQ).</b></p>
+  <div class="mt-8 flex flex-wrap gap-3">
+   <a href="#contact" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 font-semibold">Request a Custom Quote</a>
+   <a href="#capabilities" class="px-6 py-3 rounded-lg border border-white/30 hover:bg-white/10 font-semibold">Explore Capabilities</a>
+  </div>
+  <div class="mt-8 flex flex-wrap gap-2 text-sm">
+   <span class="glass px-3 py-1.5">✔ Zero MOQ</span>
+   <span class="glass px-3 py-1.5">✔ 100% Continuity Tested</span>
+   <span class="glass px-3 py-1.5">✔ IPC/WHMA-A-620 Standards</span>
+  </div>
+ </div>
+
+ <!-- HERO 3D -->
+ <div class="relative glass overflow-hidden" style="height:440px">
+  <span class="absolute top-3 left-3 z-10 text-xs px-3 py-1 rounded-full bg-slate-900/80 border border-sky-400/50 blue">Interactive 3D Preview — Drag to Rotate</span>
+  <div id="hero3d" class="w-full h-full cursor-grab"></div>
+  <!-- 3D FILE UPLOAD: visitor previews their own .glb / .stl / .obj locally (never uploaded anywhere) -->
+  <div class="absolute bottom-3 left-3 right-3 z-10 flex flex-wrap items-center gap-2 text-xs">
+   <label class="cursor-pointer px-3 py-1.5 rounded-full bg-sky-500/90 hover:bg-sky-400 font-semibold">Upload 3D file to preview (.glb, .stl, .obj)
+    <input type="file" id="model3d" accept=".glb,.gltf,.stl,.obj" class="hidden">
+   </label>
+   <button type="button" id="modelReset" class="hidden px-3 py-1.5 rounded-full bg-slate-900/80 border border-white/30 hover:bg-white/10">Back to default</button>
+   <span id="modelErr" class="hidden px-3 py-1.5 rounded-full bg-red-500/20 border border-red-400/50 text-red-200"></span>
+  </div>
+  <!--
+   SWAP TO <model-viewer> (for your own .glb/.gltf CAD file):
+   1. Uncomment the model-viewer <script> in <head>.
+   2. Delete <div id="hero3d"> above and the "THREE.JS SCENE" script at the bottom.
+   3. Put this in its place (file in same repo, e.g. /models/harness.glb):
+   <model-viewer src="models/harness.glb" alt="Nityacon wire harness"
+     camera-controls auto-rotate shadow-intensity="1" exposure="1.1"
+     style="width:100%;height:100%;background:transparent"></model-viewer>
+  -->
+ </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="capabilities" class="max-w-7xl mx-auto px-5 py-16">
+ <h2 class="text-3xl font-bold">Core <span class="blue">Capabilities</span> &amp; Technical Specs</h2>
+ <div class="mt-8 grid md:grid-cols-2 gap-5">
+  <div class="glass p-6"><h3 class="font-semibold text-lg amber">Custom Wire Harnesses</h3><p class="mt-2 text-slate-300">Custom wire harnesses and wiring looms with multi-branch trunk routing, built from your schematic, BOM or sketch. Ideal for rapid prototyping.</p></div>
+  <div class="glass p-6"><h3 class="font-semibold text-lg amber">Cut, Strip &amp; Crimp</h3><p class="mt-2 text-slate-300">Automated cut-and-strip processing and precision terminal crimping, including JST &amp; Molex crimping, fine gauge up to 30 AWG.</p></div>
+  <div class="glass p-6"><h3 class="font-semibold text-lg amber">Protective Sleeving &amp; Labeling</h3><p class="mt-2 text-slate-300">Expandable braided mesh, heat-shrink strain relief, LSZH flame-retardant jackets and custom wire-ID marking.</p></div>
+  <div class="glass p-6"><h3 class="font-semibold text-lg amber">Turnkey BOM &amp; Contract Manufacturing</h3><p class="mt-2 text-slate-300">Turnkey BOM &amp; component sourcing of wire, terminals and original connectors, plus low-volume contract manufacturing with on-time pan-India delivery.</p></div>
+ </div>
+
+ <!-- 5 CORE ASSEMBLIES -->
+ <div class="mt-16">
+  <h3 class="text-2xl font-bold">5 Core Cable &amp; Connector <span class="blue">Assemblies We Build</span></h3>
+  <p class="mt-2 text-slate-300">Available from day one, from a single prototype to production batches.</p>
+  <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-6 gap-5">
+   <div class="glass p-6 lg:col-span-2"><div class="text-sm font-bold tracking-widest amber">01</div><h4 class="mt-2 font-semibold text-lg">Micro-Signal &amp; Telemetry Harnesses</h4><p class="mt-2 text-sm text-slate-300"><b class="text-white font-semibold">JST &amp; Molex crimping:</b> JST (SH, GH, XH) and Molex PicoBlade assemblies for flight controllers, sensors, and PCBs.</p></div>
+   <div class="glass p-6 lg:col-span-2"><div class="text-sm font-bold tracking-widest amber">02</div><h4 class="mt-2 font-semibold text-lg">High-Current Power &amp; Battery Leads</h4><p class="mt-2 text-sm text-slate-300"><b class="text-white font-semibold">XT60/XT90 silicone power leads:</b> silicone-insulated XT30, XT60, and XT90 power distribution harnesses for drones and robotics.</p></div>
+   <div class="glass p-6 lg:col-span-2"><div class="text-sm font-bold tracking-widest amber">03</div><h4 class="mt-2 font-semibold text-lg">Data Center &amp; Server Rack PDU Cables</h4><p class="mt-2 text-sm text-slate-300"><b class="text-white font-semibold">IEC PDU power harnesses:</b> pre-terminated IEC C13, C14, C19, and C20 power assemblies with flame-retardant LSZH jackets.</p></div>
+   <div class="glass p-6 lg:col-span-3"><div class="text-sm font-bold tracking-widest amber">04</div><h4 class="mt-2 font-semibold text-lg">EMI-Shielded Data &amp; Ribbon Jumpers</h4><p class="mt-2 text-sm text-slate-300"><b class="text-white font-semibold">EMI-shielded assemblies:</b> high-density internal communication cables with braided mesh and foil shielding for noise-free signal integrity.</p></div>
+   <div class="glass p-6 lg:col-span-3 border-sky-400/40"><div class="text-sm font-bold tracking-widest amber">05</div><h4 class="mt-2 font-semibold text-lg">Custom Schematic &amp; BOM Builds</h4><p class="mt-2 text-sm text-slate-300">100% bespoke multi-branch wire harnesses and wiring looms built directly from your engineering schematics, Bill of Materials (BOM), CAD files, or hand-drawn pinout sketches.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- QUALITY ASSURANCE -->
+<section id="quality" class="max-w-7xl mx-auto px-5 py-16">
+ <h2 class="text-3xl font-bold">Quality Assurance &amp; <span class="blue">Testing Protocol</span></h2>
+ <p class="mt-2 text-slate-300 max-w-2xl">Every harness gets 100% electrical continuity &amp; crimp pull testing, polarity checks and IPC/WHMA-A-620 workmanship review before it leaves the bench.</p>
+ <div class="mt-8 grid md:grid-cols-2 gap-5">
+  <div class="glass p-6 flex gap-4">
+   <div class="shrink-0 w-10 h-10 rounded-full border border-sky-400/60 grid place-items-center font-bold blue">1</div>
+   <div><h3 class="font-semibold text-lg amber">100% Electrical Continuity Testing</h3><p class="mt-1 text-sm text-slate-300">100% end-to-end electrical continuity: every single wire and pin is verified on modular test boards for zero open circuits or cross-wiring.</p></div>
+  </div>
+  <div class="glass p-6 flex gap-4">
+   <div class="shrink-0 w-10 h-10 rounded-full border border-sky-400/60 grid place-items-center font-bold blue">2</div>
+   <div><h3 class="font-semibold text-lg amber">Sacrificial Crimp Pull-Force Testing</h3><p class="mt-1 text-sm text-slate-300">Batch-level crimp pull testing to guarantee terminals never slip under heavy vibration.</p></div>
+  </div>
+  <div class="glass p-6 flex gap-4">
+   <div class="shrink-0 w-10 h-10 rounded-full border border-sky-400/60 grid place-items-center font-bold blue">3</div>
+   <div><h3 class="font-semibold text-lg amber">Pinout &amp; Polarity Verification</h3><p class="mt-1 text-sm text-slate-300">Double-checked against your schematic/BOM before dispatch to protect sensitive flight controllers and servers.</p></div>
+  </div>
+  <div class="glass p-6 flex gap-4">
+   <div class="shrink-0 w-10 h-10 rounded-full border border-sky-400/60 grid place-items-center font-bold blue">4</div>
+   <div><h3 class="font-semibold text-lg amber">IPC/WHMA-A-620 Workmanship Standards</h3><p class="mt-1 text-sm text-slate-300">Strict adherence to strip-length accuracy, zero nicked copper strands, and proper bend-radius protection.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<!-- IMAGES: drop 4 photos into an /images folder next to index.html named
+     drone.jpg, datacenter.jpg, robotics.jpg, students.jpg (landscape, ~800x500, under 200 KB each).
+     Free sources: unsplash.com, pexels.com. If a file is missing, a blue gradient shows instead. -->
+<section id="serve" class="max-w-7xl mx-auto px-5 py-16">
+ <h2 class="text-3xl font-bold">Who We <span class="blue">Serve</span></h2>
+ <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5" style="perspective:900px">
+ <div class="glass tilt overflow-hidden">
+  <div class="h-40 bg-gradient-to-br from-sky-900 to-slate-800"><img src="images/drone.jpg" alt="Drones &amp; UAV Startups" loading="lazy" class="w-full h-full object-cover" onerror="this.remove()"></div>
+  <div class="p-6"><h3 class="font-semibold amber">Drones &amp; UAV Startups</h3><p class="mt-2 text-sm text-slate-300">Ultra-lightweight, vibration-resistant wiring looms for flight controllers, ESCs, and telemetry, built fast for rapid prototyping.</p></div>
+ </div>
+ <div class="glass tilt overflow-hidden">
+  <div class="h-40 bg-gradient-to-br from-sky-900 to-slate-800"><img src="images/datacenter.jpg" alt="AI Data Centers &amp; Server Racks" loading="lazy" class="w-full h-full object-cover" onerror="this.remove()"></div>
+  <div class="p-6"><h3 class="font-semibold amber">AI Data Centers &amp; Server Racks</h3><p class="mt-2 text-sm text-slate-300">Flame-retardant (LSZH), EMI-shielded internal rack harnesses and pre-terminated PDU assemblies, with on-time pan-India delivery.</p></div>
+ </div>
+ <div class="glass tilt overflow-hidden">
+  <div class="h-40 bg-gradient-to-br from-sky-900 to-slate-800"><img src="images/robotics.jpg" alt="Small MSMEs &amp; Robotics" loading="lazy" class="w-full h-full object-cover" onerror="this.remove()"></div>
+  <div class="p-6"><h3 class="font-semibold amber">Small MSMEs &amp; Robotics</h3><p class="mt-2 text-sm text-slate-300">Agile low-volume contract manufacturing with DFM support, turnkey BOM &amp; component sourcing and zero heavy tooling fees.</p></div>
+ </div>
+ <div class="glass tilt overflow-hidden border-sky-400/40">
+  <div class="h-40 bg-gradient-to-br from-sky-900 to-slate-800"><img src="images/students.jpg" alt="College Students &amp; R&amp;D Labs" loading="lazy" class="w-full h-full object-cover" onerror="this.remove()"></div>
+  <div class="p-6"><h3 class="font-semibold amber">College Students &amp; R&amp;D Labs</h3><p class="mt-2 text-sm text-slate-300">Single-unit prototypes welcome: Formula Student/SAE teams, drone competitions, final-year projects. A rough hand-drawn pinout sketch is enough for rapid prototyping.</p></div>
+ </div>
+ </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="process" class="max-w-7xl mx-auto px-5 py-16">
+ <h2 class="text-3xl font-bold">How It <span class="blue">Works</span></h2>
+ <div class="mt-8 grid md:grid-cols-4 gap-5">
+  <div class="glass p-6"><div class="text-4xl font-extrabold amber">01</div><h3 class="mt-2 font-semibold">Submit Your Design</h3><p class="text-sm text-slate-300 mt-1">Schematic, BOM, CAD, or hand-drawn sketch.</p></div>
+  <div class="glass p-6"><div class="text-4xl font-extrabold amber">02</div><h3 class="mt-2 font-semibold">Engineering Review &amp; Quote</h3><p class="text-sm text-slate-300 mt-1">24-hour transparent quote.</p></div>
+  <div class="glass p-6"><div class="text-4xl font-extrabold amber">03</div><h3 class="mt-2 font-semibold">Precision Assembly</h3><p class="text-sm text-slate-300 mt-1">Built with 100% continuity testing.</p></div>
+  <div class="glass p-6"><div class="text-4xl font-extrabold amber">04</div><h3 class="mt-2 font-semibold">Fast Dispatch</h3><p class="text-sm text-slate-300 mt-1">Plug-and-play delivery.</p></div>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-4xl mx-auto px-5 py-16">
+ <div class="glass p-8">
+  <h2 class="text-3xl font-bold">About <span class="blue">Nityacon</span></h2>
+  <p class="mt-4 text-slate-300 leading-relaxed">Founded in 2026, <b>Nityacon</b> stands for constant, unbreakable connectivity. We bridge the gap between rapid hardware prototyping and industrial-grade cable assembly, giving innovators, students, and growing enterprises access to zero-error wiring without massive factory minimums.</p>
+ </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="max-w-4xl mx-auto px-5 py-16">
+ <h2 class="text-3xl font-bold">Common <span class="blue">Questions</span></h2>
+ <div class="mt-8 space-y-3">
+ <details class="glass p-5" open>
+  <summary class="font-semibold">Do you really accept single-unit (1 piece) prototype orders?</summary>
+  <p class="mt-3 text-sm text-slate-300">Yes. Nityacon has zero minimum order quantity (MOQ). We build single-piece prototypes and small batches for startups, MSMEs, R&D labs and college teams, and a rough hand-drawn pinout sketch is enough to get a quote.</p>
+ </details>
+ <details class="glass p-5">
+  <summary class="font-semibold">Can you source the wires and original JST/Molex connectors from our BOM?</summary>
+  <p class="mt-3 text-sm text-slate-300">Yes. We offer turnkey BOM and component sourcing: wire, terminals and original JST and Molex connectors as listed in your BOM. You can also supply your own parts. Lead times for sourced parts are confirmed in your quote.</p>
+ </details>
+ <details class="glass p-5">
+  <summary class="font-semibold">Do you ship custom wire harnesses across India?</summary>
+  <p class="mt-3 text-sm text-slate-300">Yes. We offer on-time pan-India delivery. Every harness is continuity tested and dispatched ready to plug in, with the delivery timeline confirmed in your quote.</p>
+ </details>
+ </div>
+</section>
+
+<!-- CONTACT / RFQ -->
+<section id="contact" class="max-w-7xl mx-auto px-5 py-16 grid lg:grid-cols-5 gap-8">
+ <div class="lg:col-span-2 glass p-6 h-fit">
+  <h2 class="text-3xl font-bold">Contact <span class="blue">Us</span></h2>
+  <ul class="mt-5 space-y-3 text-slate-300">
+   <li>✉️ <a class="hover:text-white" href="mailto:sales@nityacon.in">sales@nityacon.in</a></li>
+   <!-- EDIT HERE: replace "+91 99999 99999" below with your real business phone number -->
+   <li>📞 +91 99999 99999</li>
+   <!-- EDIT HERE: replace "[City, State]" below with your real workshop location, e.g. Pune, Maharashtra -->
+   <li>📍 Workshop: [City, State], India</li>
+  </ul>
+  <a href="https://wa.me/919999999999?text=Hi%20Nityacon%2C%20I%20need%20a%20wire%20harness%20quote" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-green-500 hover:bg-green-400 text-slate-900 font-semibold">💬 Chat on WhatsApp</a>
+ </div>
+
+ <!-- Replace YOUR_EMAIL_HERE below. Standard submission = file attachments work. -->
+ <form id="rfq" class="lg:col-span-3 glass p-6 grid sm:grid-cols-2 gap-4"
+       action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" enctype="multipart/form-data">
+  <input type="hidden" name="_subject" value="New Nityacon RFQ Inquiry!">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <!-- Optional: redirect after submit (use your live URL)
+  <input type="hidden" name="_next" value="https://YOUR_USERNAME.github.io/YOUR_REPO/#contact"> -->
+
+  <input class="sm:col-span-1" type="text" name="Full_Name_and_Role" placeholder="Full Name &amp; Role" required>
+  <input type="text" name="Organization_or_College" placeholder="Organization / College Name">
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="tel" name="Phone_or_WhatsApp" placeholder="WhatsApp / Phone Number" required>
+  <select name="Project_Category" class="sm:col-span-2" required>
+   <option value="" disabled selected>Project Category</option>
+   <option>Drone / UAV</option><option>Data Center / Server Infrastructure</option><option>Robotics / Industrial MSME</option><option>College Project / Academic R&amp;D</option><option>Other Custom Electronics</option>
+  </select>
+  <select name="Estimated_Quantity" required>
+   <option value="" disabled selected>Estimated Quantity</option>
+   <option>Prototype / Single Unit (1–10 pcs)</option><option>Small Batch (11–100 pcs)</option><option>Medium Production (101–500+ pcs)</option>
+  </select>
+  <select name="Delivery_Timeline" required>
+   <option value="" disabled selected>Target Delivery Timeline</option>
+   <option>Urgent / Within 1 Week</option><option>2–3 Weeks</option><option>Flexible</option>
+  </select>
+  <label class="sm:col-span-2 text-sm text-slate-300">Upload Schematic, BOM, or Sketch (PDF, PNG, XLSX, ZIP)
+   <input type="file" name="attachment" accept=".pdf,.png,.jpg,.jpeg,.xlsx,.csv,.zip" class="mt-1">
+  </label>
+  <textarea class="sm:col-span-2" name="Project_Notes" rows="4" placeholder="Project notes: connectors, wire gauge, lengths, environment..."></textarea>
+  <button type="submit" class="sm:col-span-2 py-3 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold">Send RFQ</button>
+  <p id="rfqMsg" class="sm:col-span-2 text-sm"></p>
+ </form>
+</section>
+</main>
+
+<footer class="border-t border-white/10 mt-10 py-8 text-center text-sm text-slate-400">
+ <div class="flex justify-center gap-5 mb-3"><a href="#capabilities" class="hover:text-white">Capabilities</a><a href="#serve" class="hover:text-white">Who We Serve</a><a href="#process" class="hover:text-white">How It Works</a><a href="#contact" class="hover:text-white">Contact</a></div>
+ © 2026 Nityacon
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919999999999" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+   class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-green-500 hover:bg-green-400 grid place-items-center text-2xl shadow-lg">💬</a>
+
+<script>
+/* ---------- OPTIONAL AJAX SUBMIT ----------
+   Default: standard form POST (supports file attachments).
+   To use instant AJAX instead, UNCOMMENT this block and replace YOUR_EMAIL_HERE.
+   Caveat: AJAX attachment handling on Formsubmit's free plan can be unreliable;
+   test with a file before relying on it.
+
+document.getElementById('rfq').addEventListener('submit', async e => {
+  e.preventDefault();
+  const msg = document.getElementById('rfqMsg');
+  msg.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/YOUR_EMAIL_HERE', {
+      method: 'POST', body: new FormData(e.target), headers: { 'Accept': 'application/json' }
+    });
+    if (!res.ok) throw new Error();
+    msg.textContent = '✅ Thanks! We will reply within 24 hours.'; e.target.reset();
+  } catch { msg.textContent = '❌ Could not send. Please email sales@nityacon.in.'; }
+});
+------------------------------------------- */
+
+/* ---------- Card 3D tilt ---------- */
+document.querySelectorAll('.tilt').forEach(c=>{
+  c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`rotateY(${x*14}deg) rotateX(${-y*14}deg) translateZ(8px)`});
+  c.addEventListener('mouseleave',()=>c.style.transform='');
+});
+
+/* ---------- THREE.JS SCENE: procedural wire harness ---------- */
+(function(){
+  const el=document.getElementById('hero3d'); if(!el||!window.THREE) return;
+  const W=()=>el.clientWidth,H=()=>el.clientHeight;
+  const scene=new THREE.Scene();
+  const cam=new THREE.PerspectiveCamera(40,W()/H(),.1,100); cam.position.set(0,2.2,9.5);
+  const ren=new THREE.WebGLRenderer({antialias:true,alpha:true});
+  ren.setPixelRatio(Math.min(devicePixelRatio,2)); ren.setSize(W(),H()); el.appendChild(ren.domElement);
+  scene.add(new THREE.AmbientLight(0xffffff,.55));
+  const key=new THREE.DirectionalLight(0xffffff,.9); key.position.set(5,6,5); scene.add(key);
+  const rim=new THREE.PointLight(0x38bdf8,1.2,30); rim.position.set(-6,2,-4); scene.add(rim);
+  const warm=new THREE.PointLight(0xfbbf24,.6,30); warm.position.set(4,-3,4); scene.add(warm);
+
+  const g=new THREE.Group(); scene.add(g);
+  // braided mesh texture
+  const cv=document.createElement('canvas'); cv.width=cv.height=64; const x=cv.getContext('2d');
+  x.fillStyle='#1b2433'; x.fillRect(0,0,64,64); x.strokeStyle='#5b6b82'; x.lineWidth=5;
+  for(let i=-64;i<128;i+=16){x.beginPath();x.moveTo(i,0);x.lineTo(i+64,64);x.stroke();x.beginPath();x.moveTo(i+64,0);x.lineTo(i,64);x.stroke();}
+  const tex=new THREE.CanvasTexture(cv); tex.wrapS=tex.wrapT=THREE.RepeatWrapping; tex.repeat.set(26,3);
+  const braid=new THREE.MeshStandardMaterial({map:tex,roughness:.8,metalness:.2});
+  const matte=c=>new THREE.MeshStandardMaterial({color:c,roughness:.45,metalness:.05});
+  const gold=new THREE.MeshStandardMaterial({color:0xd4af37,roughness:.25,metalness:1});
+  const tubeAlong=(pts,r,m)=>{const c=new THREE.CatmullRomCurve3(pts);return [new THREE.Mesh(new THREE.TubeGeometry(c,64,r,14,false),m),c]};
+
+  const [trunk]=tubeAlong([new THREE.Vector3(-3,0,0),new THREE.Vector3(-1.5,.12,0),new THREE.Vector3(.4,0,.1)],.3,braid); g.add(trunk);
+  // trunk end connector (Molex-style) + sleeve
+  function connector(pos,color,pins){
+    const grp=new THREE.Group();
+    grp.add(new THREE.Mesh(new THREE.BoxGeometry(.55,.4*Math.max(1,pins/3),.34),matte(color)));
+    for(let i=0;i<pins;i++){const p=new THREE.Mesh(new THREE.CylinderGeometry(.025,.025,.3,8),gold);p.rotation.z=Math.PI/2;
+      p.position.set(.4,(i-(pins-1)/2)*.13,0);grp.add(p);}
+    grp.position.copy(pos);return grp;}
+  const big=connector(new THREE.Vector3(-3.25,0,0),0xe8e8e8,6); big.rotation.y=Math.PI; big.scale.setScalar(1.3); g.add(big);
+  const sl=new THREE.Mesh(new THREE.CylinderGeometry(.36,.36,.55,24),matte(0x0b0b0f)); sl.rotation.z=Math.PI/2; sl.position.set(.3,0,.08); g.add(sl);
+
+  const wires=[[0xe11d48,1.5,.6],[0x111111,.55,-.3],[0xfacc15,-.5,.4],[0x2563eb,-1.5,-.5]];
+  wires.forEach(([col,y,z],i)=>{
+    const s=new THREE.Vector3(.55,0,.1), e=new THREE.Vector3(3.1,y,z);
+    const [w,c]=tubeAlong([s,new THREE.Vector3(1.4,y*.15,z*.3),new THREE.Vector3(2.2,y*.8,z*.9),e],.075,matte(col)); g.add(w);
+    const p=c.getPointAt(.86),t=c.getTangentAt(.86);
+    const hs=new THREE.Mesh(new THREE.CylinderGeometry(.12,.12,.35,16),matte(0x15151a)); hs.position.copy(p); hs.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),t); g.add(hs);
+    g.add(connector(e.clone().add(new THREE.Vector3(.2,0,0)),[0xf5f5f5,0x222222,0xf5f5f5,0x222222][i],[2,3,4,2][i]));
+  });
+  g.position.x=-.2;
+
+  const ctl=new THREE.OrbitControls(cam,ren.domElement);
+  ctl.enableDamping=true; ctl.enablePan=false; ctl.autoRotate=true; ctl.autoRotateSpeed=1.2; ctl.minDistance=5; ctl.maxDistance=14;
+
+  /* ---- Visitor 3D file preview (.glb/.stl/.obj). Any failure -> generic error, default stays. ---- */
+  const inp=document.getElementById('model3d'),errEl=document.getElementById('modelErr'),resetBtn=document.getElementById('modelReset');
+  const MAX_MB=25; let custom=null,errTimer;
+  const fail=()=>{errEl.textContent='Sorry, we could not load this file. Showing the default preview.';errEl.classList.remove('hidden');clearTimeout(errTimer);errTimer=setTimeout(()=>errEl.classList.add('hidden'),6000)};
+  function clearCustom(){ if(!custom)return; scene.remove(custom);
+    custom.traverse(o=>{if(o.geometry)o.geometry.dispose();if(o.material)[].concat(o.material).forEach(m=>m.dispose())}); custom=null; }
+  function showDefault(){ clearCustom(); g.visible=true; resetBtn.classList.add('hidden'); cam.position.set(0,2.2,9.5); ctl.target.set(0,0,0); ctl.update(); }
+  function showCustom(obj){
+    let meshes=0; obj.traverse(o=>{if(o.isMesh)meshes++}); if(!meshes) throw new Error('empty');
+    const box=new THREE.Box3().setFromObject(obj), size=box.getSize(new THREE.Vector3()), mx=Math.max(size.x,size.y,size.z);
+    if(!isFinite(mx)||mx<=0) throw new Error('bad size');
+    const wrap=new THREE.Group(); obj.position.sub(box.getCenter(new THREE.Vector3())); wrap.add(obj); wrap.scale.setScalar(6/mx);
+    clearCustom(); custom=wrap; scene.add(custom); g.visible=false; resetBtn.classList.remove('hidden');
+    errEl.classList.add('hidden'); cam.position.set(0,2.2,9.5); ctl.target.set(0,0,0); ctl.update();
+  }
+  const greyMat=()=>new THREE.MeshStandardMaterial({color:0x9fb4cc,roughness:.5,metalness:.3,side:THREE.DoubleSide});
+  inp.addEventListener('change',()=>{
+    const f=inp.files[0]; if(!f)return;
+    const ext=f.name.split('.').pop().toLowerCase();
+    if(!['glb','gltf','stl','obj'].includes(ext)||f.size>MAX_MB*1048576||f.size===0){inp.value='';return fail();}
+    const rd=new FileReader(); rd.onerror=()=>{inp.value='';fail()};
+    rd.onload=()=>{
+      try{
+        const d=rd.result;
+        if(ext==='glb'||ext==='gltf'){
+          new THREE.GLTFLoader().parse(d,'',gl=>{try{showCustom(gl.scene)}catch(e){fail()}},fail);
+        }else if(ext==='stl'){
+          const geo=new THREE.STLLoader().parse(d); if(!geo.attributes.position||!geo.attributes.position.count) throw 0;
+          geo.computeVertexNormals(); showCustom(new THREE.Mesh(geo,greyMat()));
+        }else{
+          const o=new THREE.OBJLoader().parse(d); o.traverse(m=>{if(m.isMesh){m.material=greyMat();if(!m.geometry.attributes.normal)m.geometry.computeVertexNormals()}}); showCustom(o);
+        }
+      }catch(e){fail()}
+      inp.value='';
+    };
+    ext==='obj'?rd.readAsText(f):rd.readAsArrayBuffer(f);
+  });
+  resetBtn.addEventListener('click',showDefault);
+  (function loop(){requestAnimationFrame(loop);ctl.update();ren.render(scene,cam)})();
+  addEventListener('resize',()=>{cam.aspect=W()/H();cam.updateProjectionMatrix();ren.setSize(W(),H())});
+})();
+</script>
+</body>
+</html>
