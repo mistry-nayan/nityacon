@@ -88,33 +88,38 @@
 
 <main id="top">
 <!-- HERO -->
-<section class="max-w-7xl mx-auto px-5 pt-32 pb-20 grid lg:grid-cols-2 gap-10 items-center">
+<section class="max-w-4xl mx-auto px-5 pt-32 pb-12 text-center">
  <div>
   <p class="mb-3 inline-block text-xs sm:text-sm font-semibold tracking-wide uppercase px-3 py-1 rounded-full border border-amber-400/60 amber">Custom Wire Harness &amp; Cable Assembly Manufacturer in India</p>
   <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Precision Custom <span class="blue">Wire Harnesses.</span> From Single Prototypes to Scalable Production.</h1>
   <p class="mt-5 text-slate-300 text-lg">High-reliability wiring assemblies built for UAVs, AI Data Centers, Robotics, MSMEs, and College Innovation Teams. <b class="amber">Zero Minimum Order Quantity (MOQ).</b></p>
-  <div class="mt-8 flex flex-wrap gap-3">
+  <div class="mt-8 flex flex-wrap justify-center gap-3">
    <a href="#contact" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 font-semibold">Request a Custom Quote</a>
    <a href="#capabilities" class="px-6 py-3 rounded-lg border border-white/30 hover:bg-white/10 font-semibold">Explore Capabilities</a>
   </div>
-  <div class="mt-8 flex flex-wrap gap-2 text-sm">
+  <div class="mt-8 flex flex-wrap justify-center gap-2 text-sm">
    <span class="glass px-3 py-1.5">✔ Zero MOQ</span>
    <span class="glass px-3 py-1.5">✔ 100% Continuity Tested</span>
    <span class="glass px-3 py-1.5">✔ IPC/WHMA-A-620 Standards</span>
   </div>
  </div>
+</section>
 
- <!-- HERO 3D -->
- <div class="relative glass overflow-hidden" style="height:440px">
+<!-- 3D VIEWER SECTION -->
+<section id="viewer" class="max-w-5xl mx-auto px-5 pb-16">
+ <h2 class="text-3xl font-bold text-center">Interactive <span class="blue">3D Harness</span> Preview</h2>
+ <p class="mt-2 text-slate-300 text-center">Inspect a sample multi-branch harness, or load your own design. Files stay on your device.</p>
+ <!-- 3D VIEWER (Three.js canvas; code at bottom of file) -->
+ <div class="relative glass overflow-hidden mt-8" style="height:min(560px,75vh)">
   <span class="absolute top-3 left-3 z-10 text-xs px-3 py-1 rounded-full bg-slate-900/80 border border-sky-400/50 blue">Interactive 3D Preview — Drag to Rotate</span>
   <div id="hero3d" class="w-full h-full cursor-grab"></div>
   <!-- 3D FILE UPLOAD: visitor previews their own .glb / .stl / .obj locally (never uploaded anywhere) -->
-  <div class="absolute bottom-3 left-3 right-3 z-10 flex flex-wrap items-center gap-2 text-xs">
-   <label class="cursor-pointer px-3 py-1.5 rounded-full bg-sky-500/90 hover:bg-sky-400 font-semibold">Upload 3D file to preview (.glb, .stl, .obj)
+  <div class="absolute bottom-3 left-3 right-3 z-10 flex flex-wrap items-center gap-3 text-sm sm:text-base">
+   <label class="cursor-pointer px-5 py-2.5 rounded-full bg-sky-500/90 hover:bg-sky-400 font-bold">View your own 3D design <span class="font-normal text-xs sm:text-sm opacity-80">(.glb, .stl, .obj)</span>
     <input type="file" id="model3d" accept=".glb,.gltf,.stl,.obj" class="hidden">
    </label>
-   <button type="button" id="modelReset" class="hidden px-3 py-1.5 rounded-full bg-slate-900/80 border border-white/30 hover:bg-white/10">Back to default</button>
-   <span id="modelErr" class="hidden px-3 py-1.5 rounded-full bg-red-500/20 border border-red-400/50 text-red-200"></span>
+   <button type="button" id="modelReset" class="hidden px-4 py-2 rounded-full bg-slate-900/80 border border-white/30 hover:bg-white/10">Back to default</button>
+   <span id="modelErr" class="hidden px-4 py-2 rounded-full bg-red-500/20 border border-red-400/50 text-red-200"></span>
   </div>
   <!--
    SWAP TO <model-viewer> (for your own .glb/.gltf CAD file):
