@@ -122,6 +122,7 @@
   <p class="mb-3 inline-block text-xs sm:text-sm font-semibold tracking-wide uppercase px-3 py-1 rounded-full border border-amber-400/60 amber">Custom Wire Harness &amp; Cable Assembly Manufacturer in India</p>
   <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Precision Custom <span class="blue">Wire Harnesses.</span> From Single Prototypes to Scalable Production.</h1>
   <p class="mt-5 text-slate-300 text-lg">High-reliability wiring assemblies built for UAVs, AI Data Centers, Robotics, MSMEs, and College Innovation Teams. <b class="amber">Zero Minimum Order Quantity (MOQ).</b></p>
+  <p class="mt-4 text-xl sm:text-2xl font-semibold tracking-wide blue">Engineering Tomorrow’s Connections.</p>
   <div class="mt-8 flex flex-wrap justify-center gap-3">
    <a href="#contact" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 font-semibold">Request a Custom Quote</a>
    <a href="#capabilities" class="px-6 py-3 rounded-lg border border-white/30 hover:bg-white/10 font-semibold">Explore Capabilities</a>
@@ -389,37 +390,36 @@ document.querySelectorAll('.tilt').forEach(c=>{
   const rim=new THREE.PointLight(0x38bdf8,1.2,30); rim.position.set(-6,2,-4); scene.add(rim);
   const warm=new THREE.PointLight(0xfbbf24,.6,30); warm.position.set(4,-3,4); scene.add(warm);
 
-  const g=new THREE.Group(); scene.add(g);
-  // braided mesh texture
-  const cv=document.createElement('canvas'); cv.width=cv.height=64; const x=cv.getContext('2d');
-  x.fillStyle='#1b2433'; x.fillRect(0,0,64,64); x.strokeStyle='#5b6b82'; x.lineWidth=5;
-  for(let i=-64;i<128;i+=16){x.beginPath();x.moveTo(i,0);x.lineTo(i+64,64);x.stroke();x.beginPath();x.moveTo(i+64,0);x.lineTo(i,64);x.stroke();}
-  const tex=new THREE.CanvasTexture(cv); tex.wrapS=tex.wrapT=THREE.RepeatWrapping; tex.repeat.set(26,3);
-  const braid=new THREE.MeshStandardMaterial({map:tex,roughness:.8,metalness:.2});
+  /* MODELS-BEGIN */
+  const g=new THREE.Group(); scene.add(g);   // container for the currently shown sample model
+  const V=(x,y,z)=>new THREE.Vector3(x,y,z);
+  const mkTex=(draw,rx,ry)=>{const c=document.createElement('canvas');c.width=c.height=64;draw(c.getContext('2d'));const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rx,ry);return t};
+  const braidTex=(bg,fg,rx)=>mkTex(x=>{x.fillStyle=bg;x.fillRect(0,0,64,64);x.strokeStyle=fg;x.lineWidth=5;for(let i=-64;i<128;i+=16){x.beginPath();x.moveTo(i,0);x.lineTo(i+64,64);x.stroke();x.beginPath();x.moveTo(i+64,0);x.lineTo(i,64);x.stroke();}},rx,3);
+  const braid=new THREE.MeshStandardMaterial({map:braidTex('#1b2433','#5b6b82',26),roughness:.8,metalness:.2});
   const matte=c=>new THREE.MeshStandardMaterial({color:c,roughness:.45,metalness:.05});
+  const gloss=c=>new THREE.MeshStandardMaterial({color:c,roughness:.25,metalness:.1});
   const gold=new THREE.MeshStandardMaterial({color:0xd4af37,roughness:.25,metalness:1});
-  const tubeAlong=(pts,r,m)=>{const c=new THREE.CatmullRomCurve3(pts);return [new THREE.Mesh(new THREE.TubeGeometry(c,64,r,14,false),m),c]};
-
-  const [trunk]=tubeAlong([new THREE.Vector3(-3,0,0),new THREE.Vector3(-1.5,.12,0),new THREE.Vector3(.4,0,.1)],.3,braid); g.add(trunk);
-  // trunk end connector (Molex-style) + sleeve
-  function connector(pos,color,pins){
-    const grp=new THREE.Group();
-    grp.add(new THREE.Mesh(new THREE.BoxGeometry(.55,.4*Math.max(1,pins/3),.34),matte(color)));
-    for(let i=0;i<pins;i++){const p=new THREE.Mesh(new THREE.CylinderGeometry(.025,.025,.3,8),gold);p.rotation.z=Math.PI/2;
-      p.position.set(.4,(i-(pins-1)/2)*.13,0);grp.add(p);}
-    grp.position.copy(pos);return grp;}
-  const big=connector(new THREE.Vector3(-3.25,0,0),0xe8e8e8,6); big.rotation.y=Math.PI; big.scale.setScalar(1.3); g.add(big);
-  const sl=new THREE.Mesh(new THREE.CylinderGeometry(.36,.36,.55,24),matte(0x0b0b0f)); sl.rotation.z=Math.PI/2; sl.position.set(.3,0,.08); g.add(sl);
-
-  const wires=[[0xe11d48,1.5,.6],[0x111111,.55,-.3],[0xfacc15,-.5,.4],[0x2563eb,-1.5,-.5]];
-  wires.forEach(([col,y,z],i)=>{
-    const s=new THREE.Vector3(.55,0,.1), e=new THREE.Vector3(3.1,y,z);
-    const [w,c]=tubeAlong([s,new THREE.Vector3(1.4,y*.15,z*.3),new THREE.Vector3(2.2,y*.8,z*.9),e],.075,matte(col)); g.add(w);
-    const p=c.getPointAt(.86),t=c.getTangentAt(.86);
-    const hs=new THREE.Mesh(new THREE.CylinderGeometry(.12,.12,.35,16),matte(0x15151a)); hs.position.copy(p); hs.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),t); g.add(hs);
-    g.add(connector(e.clone().add(new THREE.Vector3(.2,0,0)),[0xf5f5f5,0x222222,0xf5f5f5,0x222222][i],[2,3,4,2][i]));
-  });
-  g.position.x=-.2;
+  const steel=new THREE.MeshStandardMaterial({color:0xc9d1da,roughness:.25,metalness:1});
+  const tube=(pts,r,m)=>{const c=new THREE.CatmullRomCurve3(pts);return [new THREE.Mesh(new THREE.TubeGeometry(c,64,r,14,false),m),c]};
+  const box=(w,h,d,m,x=0,y=0,z=0)=>{const b=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);b.position.set(x,y,z);return b};
+  const cyl=(r1,r2,l,m,x,y,z)=>{const c=new THREE.Mesh(new THREE.CylinderGeometry(r1,r2,l,24),m);c.rotation.z=Math.PI/2;c.position.set(x,y,z);return c}; // axis along X; r1 end faces -X
+  const place=(gr,x,y,z,dir,sc)=>{gr.position.set(x,y,z);if(dir<0)gr.rotation.y=Math.PI;gr.scale.setScalar(sc||1);return gr};
+  // JST / Molex style housing with gold pins (pins face +X, or -X when dir<0)
+  function conn(x,y,z,col,pins,dir,sc){const gr=new THREE.Group();
+    gr.add(box(.55,.4*Math.max(1,pins/3),.34,gloss(col)));
+    for(let i=0;i<pins;i++)gr.add(cyl(.025,.025,.3,gold,.4,(i-(pins-1)/2)*.13,0));
+    return place(gr,x,y,z,dir,sc)}
+  // Sample harness: multi-branch trunk with branches, sleeves and connectors
+  function mCustom(){const m=new THREE.Group();
+    m.add(tube([V(-3,0,0),V(-1.5,.12,0),V(.4,0,.1)],.3,braid)[0]);
+    m.add(conn(-3.25,0,0,0xe8e8e8,6,-1,1.3), cyl(.36,.36,.55,gloss(0x0b0b0f),.3,0,.08));
+    [[0xe11d48,1.5,.6,0xf5f5f5,2],[0x111111,.55,-.3,0x222222,3],[0xfacc15,-.5,.4,0xf5f5f5,4],[0x2563eb,-1.5,-.5,0x222222,2]].forEach(([col,y,z,cc,pins])=>{
+      const e=V(3.1,y,z),[w,c]=tube([V(.55,0,.1),V(1.4,y*.15,z*.3),V(2.2,y*.8,z*.9),e],.075,matte(col)); m.add(w);
+      const hs=new THREE.Mesh(new THREE.CylinderGeometry(.12,.12,.35,16),gloss(0x15151a)); hs.position.copy(c.getPointAt(.86));
+      hs.quaternion.setFromUnitVectors(V(0,1,0),c.getTangentAt(.86)); m.add(hs);
+      m.add(conn(e.x+.2,y,z,cc,pins,1,1))});
+    m.position.x=-.2; return m}
+  /* MODELS-END */
 
   const ctl=new THREE.OrbitControls(cam,ren.domElement);
   ctl.enableDamping=true; ctl.enablePan=false; ctl.autoRotate=true; ctl.autoRotateSpeed=1.2; ctl.minDistance=5; ctl.maxDistance=14;
@@ -462,6 +462,7 @@ document.querySelectorAll('.tilt').forEach(c=>{
     ext==='obj'?rd.readAsText(f):rd.readAsArrayBuffer(f);
   });
   resetBtn.addEventListener('click',showDefault);
+  g.add(mCustom());
   (function loop(){requestAnimationFrame(loop);ctl.update();ren.render(scene,cam)})();
   addEventListener('resize',()=>{cam.aspect=W()/H();cam.updateProjectionMatrix();ren.setSize(W(),H())});
 })();
