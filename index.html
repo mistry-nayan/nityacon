@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://YOUR_DOMAIN/images/og-preview.jpg">
 <meta name="twitter:card" content="summary_large_image"> -->
 <!-- Structured data (Organization + FAQ) for Google -->
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "Nityacon", "foundingDate": "2026", "email": "sales@nityacon.in", "areaServed": "IN", "description": "Custom wire harness and cable assembly manufacturer in India."}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you really accept single-unit (1 piece) prototype orders?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Nityacon has zero minimum order quantity (MOQ). We build single-piece prototypes and small batches for startups, MSMEs, R&D labs and college teams, and a rough hand-drawn pinout sketch is enough to get a quote."}}, {"@type": "Question", "name": "Can you source the wires and original JST/Molex connectors from our BOM?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer turnkey BOM and component sourcing: wire, terminals and original JST and Molex connectors as listed in your BOM. You can also supply your own parts. Lead times for sourced parts are confirmed in your quote."}}, {"@type": "Question", "name": "Do you ship custom wire harnesses across India?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer on-time pan-India delivery. Every harness is continuity tested and dispatched ready to plug in, with the delivery timeline confirmed in your quote."}}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "Nityacon", "foundingDate": "2026", "email": "nityaconnected@gmail.com", "areaServed": "IN", "description": "Custom wire harness and cable assembly manufacturer in India."}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you really accept single-unit (1 piece) prototype orders?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Nityacon has zero minimum order quantity (MOQ). We build single-piece prototypes and small batches for startups, MSMEs, R&D labs and college teams, and a rough hand-drawn pinout sketch is enough to get a quote."}}, {"@type": "Question", "name": "Can you source the wires and original JST/Molex connectors from our BOM?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer turnkey BOM and component sourcing: wire, terminals and original JST and Molex connectors as listed in your BOM. You can also supply your own parts. Lead times for sourced parts are confirmed in your quote."}}, {"@type": "Question", "name": "Do you ship custom wire harnesses across India?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer on-time pan-India delivery. Every harness is continuity tested and dispatched ready to plug in, with the delivery timeline confirmed in your quote."}}]}]}</script>
 <!--
 =====================================================================
  SETUP NOTES (read once)
@@ -35,8 +35,7 @@
     https://formsubmit.co will not route anywhere.
  4. FILE UPLOADS: Standard submission (default) supports attachments.
     Formsubmit's free plan limits attachment size (about 5 MB).
- 5. WHATSAPP: Replace 919999999999 with your number (country code, no +).
- 6. Deploy: commit this file as index.html to your repo, then
+ 5. Deploy: commit this file as index.html to your repo, then
     Settings > Pages > Deploy from branch.
 =====================================================================
 -->
@@ -280,13 +279,9 @@
  <div class="lg:col-span-2 glass p-6 h-fit">
   <h2 class="text-3xl font-bold">Contact <span class="blue">Us</span></h2>
   <ul class="mt-5 space-y-3 text-slate-300">
-   <li>✉️ <a class="hover:text-white" href="mailto:sales@nityacon.in">sales@nityacon.in</a></li>
-   <!-- EDIT HERE: replace "+91 99999 99999" below with your real business phone number -->
-   <li>📞 +91 99999 99999</li>
-   <!-- EDIT HERE: replace "[City, State]" below with your real workshop location, e.g. Pune, Maharashtra -->
-   <li>📍 Workshop: [City, State], India</li>
+   <li>✉️ <a class="hover:text-white" href="mailto:nityaconnected@gmail.com">nityaconnected@gmail.com</a></li>
+   <li>📍 Workshop: PCMC, Pune, MH, India 411033</li>
   </ul>
-  <a href="https://wa.me/919999999999?text=Hi%20Nityacon%2C%20I%20need%20a%20wire%20harness%20quote" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-green-500 hover:bg-green-400 text-slate-900 font-semibold">💬 Chat on WhatsApp</a>
  </div>
 
  <!-- Replace YOUR_EMAIL_HERE below. Standard submission = file attachments work. -->
@@ -319,7 +314,7 @@
    <input type="file" name="attachment" accept=".pdf,.png,.jpg,.jpeg,.xlsx,.csv,.zip" class="mt-1">
   </label>
   <textarea class="sm:col-span-2" name="Project_Notes" rows="4" placeholder="Project notes: connectors, wire gauge, lengths, environment..."></textarea>
-  <button type="submit" class="sm:col-span-2 py-3 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold">Send RFQ</button>
+  <button type="submit" class="sm:col-span-2 py-3 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold">Send</button>
   <p id="rfqMsg" class="sm:col-span-2 text-sm"></p>
  </form>
 </section>
@@ -330,9 +325,6 @@
  © 2026 Nityacon
 </footer>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/919999999999" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
-   class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-green-500 hover:bg-green-400 grid place-items-center text-2xl shadow-lg">💬</a>
 
 <script>
 /* ---------- Light / dark theme toggle ---------- */
@@ -367,7 +359,7 @@ document.getElementById('rfq').addEventListener('submit', async e => {
     });
     if (!res.ok) throw new Error();
     msg.textContent = '✅ Thanks! We will reply within 24 hours.'; e.target.reset();
-  } catch { msg.textContent = '❌ Could not send. Please email sales@nityacon.in.'; }
+  } catch { msg.textContent = '❌ Could not send. Please email nityaconnected@gmail.com.'; }
 });
 ------------------------------------------- */
 
